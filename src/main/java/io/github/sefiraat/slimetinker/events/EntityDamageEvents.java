@@ -53,7 +53,7 @@ public final class EntityDamageEvents {
     }
 
     public static void headNice(EventFriend friend) {
-        friend.getPlayer().sendMessage(ThemeUtils.WARNING + "Nice");
+        friend.getPlayer().sendMessage(ThemeUtils.prefix + ThemeUtils.WARNING + "Nice");
     }
 
     public static void headAluBrass(EventFriend friend) {
@@ -369,7 +369,7 @@ public final class EntityDamageEvents {
             friend.getDamagedEntity().teleport(friend.getDamagedEntity().getLocation().clone().setDirection(friend.getPlayer().getLocation().getDirection()));
             ItemUtils.setCooldown(i, "WARP", 20000);
         } else {
-            friend.getPlayer().sendMessage(ThemeUtils.WARNING + "别看我技能冷却中");
+            friend.getPlayer().sendMessage(ThemeUtils.prefix + ThemeUtils.WARNING + "别看我技能冷却中");
         }
 
     }

@@ -18,6 +18,7 @@ public final class ThemeUtils {
         throw new UnsupportedOperationException("Utility Class");
     }
 
+    public static String prefix = "§8[§x§F§F§6§6§5§9匠魂§8]";
     public static final ChatColor WARNING = ChatColor.YELLOW;
     public static final ChatColor ERROR = ChatColor.RED;
     public static final ChatColor NOTICE = ChatColor.WHITE;

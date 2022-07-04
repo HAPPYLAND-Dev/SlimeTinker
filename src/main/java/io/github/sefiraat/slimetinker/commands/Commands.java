@@ -24,7 +24,7 @@ public class Commands extends BaseCommand {
     @Default
     public void onDefault(CommandSender sender) {
         if (sender instanceof Player) {
-            sender.sendMessage(ThemeUtils.ERROR + "必须有子指令");
+            sender.sendMessage(ThemeUtils.prefix + ThemeUtils.ERROR + "必须有子指令");
         }
     }
 
@@ -40,7 +40,7 @@ public class Commands extends BaseCommand {
                 Experience.addExp(i, amount, p, false);
             }
         } else {
-            sender.sendMessage(ThemeUtils.ERROR + "只有玩家才能执行该指令");
+            sender.sendMessage(ThemeUtils.prefix + ThemeUtils.ERROR + "只有玩家才能执行该指令");
         }
     }
 
@@ -58,7 +58,7 @@ public class Commands extends BaseCommand {
                 ArmourDefinition armour = new ArmourDefinition(Ids.PLATE, type, plateMat, gambesonMat, linksMat);
                 p.getInventory().addItem(Guide.HELM.getStack(armour));
             } else {
-                sender.sendMessage(ThemeUtils.ERROR + "只有玩家才能执行该指令");
+                sender.sendMessage(ThemeUtils.prefix + ThemeUtils.ERROR + "只有玩家才能执行该指令");
             }
         }
 
@@ -75,7 +75,7 @@ public class Commands extends BaseCommand {
                     p.getInventory().addItem(Guide.SHOVEL.getStack(tool));
                 }
             } else {
-                sender.sendMessage(ThemeUtils.ERROR + "只有玩家才能执行该指令");
+                sender.sendMessage(ThemeUtils.prefix + ThemeUtils.ERROR + "只有玩家才能执行该指令");
             }
         }
 

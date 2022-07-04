@@ -169,11 +169,11 @@ public class ToolTable extends TickingMenuBlock {
         ItemStack rod = blockMenu.getItemInSlot(INPUT_ROD);
 
         if (head == null || binding == null || rod == null) { // Missing one or more items
-            player.sendMessage(ThemeUtils.ERROR + "需要放入所有部件");
+            player.sendMessage(ThemeUtils.prefix + ThemeUtils.ERROR + "需要放入所有部件");
             return;
         }
         if (!validateClass(head, Ids.HEAD) || !validateBinder(binding) || !validateClass(rod, Ids.ROD)) { // One or more items are not the correct part
-            player.sendMessage(ThemeUtils.WARNING + "某栏位的部件无效");
+            player.sendMessage(ThemeUtils.prefix + ThemeUtils.WARNING + "某栏位的部件无效");
             return;
         }
 
